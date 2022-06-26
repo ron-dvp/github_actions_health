@@ -1,4 +1,4 @@
-# LEGIT HOME TASK 
+# GITHUB API HEALTH SERVICE
 
 ## Summary 
 Setting up with docker a python service to inspect GIT-HUB status,
