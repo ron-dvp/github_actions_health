@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  github_service:
+    image: github_status
+    volumes:
+      - ./services_to_test.txt:/home/app/services_to_test.txt
+    env_file:
+      - ./.env
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 10s
+      restart_policy:
+        condition: on-failure
